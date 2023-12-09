@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kalkaleytor</title>
+</head>
+<body>
+
+<script>
+    const Calculator = {
+    add: function(x, y) {
+        return x + y;
+    },
+    subtract: function(x, y) {
+        return x - y;
+    },
+    multiply: function(x, y) {
+        return x * y;
+    },
+    divide: function(x, y) {
+        try {
+            if (y === 0) {
+                throw new Error('Basta error yan uliton mo na lng');
+            }
+            return x / y;
+        } catch (error) {
+            return error.message;
+        }
+    }
+};
+
+console.log("Addition:", Calculator.add(5, 3));
+console.log("Subtraction:", Calculator.subtract(10, 4));
+console.log("Multiplication:", Calculator.multiply(6, 7));
+console.log("Division:", Calculator.divide(8, 2));
+console.log("Division:", Calculator.divide(5, 0)); 
+    /* Create the person object
+    var person = {
+        firstName: "Ric",
+        lastName: "Nito",
+        age: 25,
+        occupation: "ayahay",
+        address: {
+            city: "Tokyo",
+            state: "sorsogon STATE university",
+            country: "Country side"
+        },
+        isStudent: false
+    };
+
+    // Display the values of the person object
+    console.log("Person Object:", person);
+
+    // Update the age of the person
+    person.age = 26;
+
+    // Display the updated values of the person object
+    console.log("Updated Person Object:", person);
+    /*
+</script>
+
+</body>
+</html>
