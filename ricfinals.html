@@ -1,64 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>kalkaleytor</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculator</title>
 </head>
 <body>
 
+</body>
 <script>
-    const Calculator = {
-    add: function(x, y) {
-        return x + y;
-    },
-    subtract: function(x, y) {
-        return x - y;
-    },
-    multiply: function(x, y) {
-        return x * y;
-    },
-    divide: function(x, y) {
-        try {
-            if (y === 0) {
-                throw new Error('Basta error yan uliton mo na lng');
-            }
-            return x / y;
-        } catch (error) {
-            return error.message;
-        }
+
+const calcu = {
+  add: function (a, b) {
+    return a + b;
+  },
+  subtract: function (a, b) {
+    return a - b;
+  },
+  multiply: function (a, b) {
+    return a * b;
+  },
+  divide: function (a, b) {
+    try {
+      if (b === 0) {
+        throw new Error("Cannot divide by zero");
+      }
+      return a / b;
+    } catch (error) {
+      console.error(error.message);
     }
+  },
 };
 
-console.log("Addition:", Calculator.add(5, 3));
-console.log("Subtraction:", Calculator.subtract(10, 4));
-console.log("Multiplication:", Calculator.multiply(6, 7));
-console.log("Division:", Calculator.divide(8, 2));
-console.log("Division:", Calculator.divide(5, 0)); 
-    /* Create the person object
-    var person = {
-        firstName: "Ric",
-        lastName: "Nito",
-        age: 25,
-        occupation: "ayahay",
-        address: {
-            city: "Tokyo",
-            state: "sorsogon STATE university",
-            country: "Country side"
-        },
-        isStudent: false
-    };
+console.log("Addition: " + calculator.add(5, 3));
+console.log("Subtraction: " + calculator.subtract(8, 4));
+console.log("Multiplication: " + calculator.multiply(2, 6));
 
-    // Display the values of the person object
-    console.log("Person Object:", person);
+calculator.divide(10, 0); 
 
-    // Update the age of the person
-    person.age = 26;
-
-    // Display the updated values of the person object
-    console.log("Updated Person Object:", person);
-    /*
 </script>
-
-</body>
 </html>
